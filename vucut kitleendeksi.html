@@ -1,0 +1,86 @@
+
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>www.bilisimogretmeni.com Vücut Kitle Endeksi Hesaplama</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Başlıksız Belge</title>
+<script language="JavaScript" type="text/javascript">
+<!--
+function hesapla() {
+var kilo = document.KitleForm.kilo.value
+var boy = document.KitleForm.boy.value
+if(kilo > 0 && boy > 0){  
+var sonuc = kilo/(boy/100*boy/100)
+document.KitleForm.endeks.value = sonuc
+if(sonuc < 18.5){
+document.KitleForm.islemsonucu.value = "Zayıfsınız"
+}//www.bilisimogretmeni.com
+if(sonuc > 18.5 && sonuc < 25){
+document.KitleForm.islemsonucu.value = "Gayet Sağlıklı."
+}
+if(sonuc > 25){
+document.KitleForm.islemsonucu.value = "Şişmansınız."
+}
+}//www.bilisimogretmeni.com
+else{
+alert("Böyle kilo,boy olmaz tekrar dene")
+}
+}
+//-->
+</script>
+</head>
+ 
+<body>
+<form name="KitleForm">
+Kilo(kg): <input type="text" name="kilo" size="10"><br />
+Boy(cm): <input type="text" name="boy" size="10"><br />
+<input type="button" value="Kontrol Et" onClick="hesapla()"><br />
+Vücut Kitle Endeksiniz: <input type="text" name="endeks" size="10"><br />
+Sonuca Göre: <input type="text" name="islemsonucu" size="25"><br />
+<input type="reset" value="Temizle" />
+</form>
+</body>
+</html>
