@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript ödev function</title>
+    <style>
+        div {
+            text-align: center;
+            text-decoration: underline;
+
+        }
+
+        html {
+            background-color: black;
+            color: white;
+        }
+
+        ul {
+            font-size: 20px;
+            display: inline;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        li {
+            text-decoration: none;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 30px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        button:hover {
+            background-color: gray;
+            color: white;
+            transition: 2s all;
+        }
+    </style>
+    <script>
+        function kisi(isim, yas, boy, kilo, dogumtarihi, ili, ilcesi) {
+         
+            this.isim = isim;
+            this.yas = yas;
+            this.boy = boy;
+            this.kilo = kilo;
+            this.dogumtarihi = dogumtarihi;
+            this.ili = ili;
+            this.ilcesi = ilcesi;
+
+        }
+
+        var Atay = new kisi("Atay", "18 Yaşında", "1.86 Boyunda", "90 Kilo", "2005 Yılında Doğdu", "İstanbul", "Bağcılar");
+        var Ahmet = new kisi("Ahmet", "24 Yaşında", "170 Boyunda", "80 Kilo", "1999 Yılında Doğdu", "Sinop", "Boyabat");
+        var Mehmet = new kisi("Mehmet", "16 Yaşında", "190 Boyunda", "100 Kilo", "2007 Yılında Doğdu", "Ankara", "Mamak");
+        var Ali = new kisi("Ali", "15 Yaşında", "150 Boyunda", "45 Kilo", "2008 Yılında Doğdu", "Balıkesir", "Erdek");
+        var Arda = new kisi("Arda", "21 Yaşında", "175 Boyunda", "70 Kilo", "2002 Yılında Doğdu", "İstanbul", "Beşiktaş");
+        var Quaresma = new kisi("Quaresma", "39  yaşında", "1,75 m", "74 kg", " 26 Eylül 1983", "Ülkesi Portekiz", "Lizbon");
+    </script>
+</head>
+
+<body>
+    <script>
+function kisi2(){
+    
+    var x=prompt("Lütfen Bilgisini Öğrenmek İstediğiniz Öğrencinin İsmini Giriniz.");
+    
+    switch(x){
+        
+            case "Atay":
+            document.write(Atay.isim + "<br>" + Atay.yas + "<br>" + Atay.boy + "<br>" + Atay.kilo + "<br>" + Atay.dogumtarihi + "<br>" + Atay.ili + "<br>" + Atay.ilcesi);
+            break;
+            case "Ahmet":
+            document.write(Ahmet.isim + "<br>" + Ahmet.yas + "<br>" + Ahmet.boy + "<br>" + Ahmet.kilo + "<br>" + Ahmet.dogumtarihi + "<br>" + Ahmet.ili + "<br>" + Ahmet.ilcesi);
+            break;
+            case "Mehmet":
+            document.write(Mehmet.isim + "<br>" + Mehmet.yas + "<br>" + Mehmet.boy + "<br>" + Mehmet.kilo + "<br>" + Mehmet.dogumtarihi + "<br>" + Mehmet.ili + "<br>" + Mehmet.ilcesi);   
+            break;
+            case "Ali":
+            document.write(Ali.isim + "<br>" + Ali.yas + "<br>" + Ali.boy + "<br>" + Ali.kilo + "<br>" + Ali.dogumtarihi + "<br>" + Ali.ili + "<br>" + Ali.ilcesi);
+            break;
+            case "Arda":
+            document.write(Arda.isim + "<br>" + Arda.yas + "<br>" + Arda.boy + "<br>" + Arda.kilo + "<br>" + Arda.dogumtarihi + "<br>" + Arda.ili + "<br>" + Arda.ilcesi);
+            break;
+            case "Quaresma":
+            document.write(Quaresma.isim + "<br>" + Quaresma.yas + "<br>" + Quaresma.boy + "<br>" + Quaresma.kilo + "<br>" + Quaresma.dogumtarihi + "<br>" + Quaresma.ili + "<br>" + Quaresma.ilcesi);
+            default:
+            document.write("Öğrenci  Bulunamadı!");
+}}
+    </script>
+    <div>
+        <h1>Öğrenci Listesi</h1>
+        <ul>
+            <li>Atay</li>
+            <li>Ahmet</li>
+            <li>Mehmet</li>
+            <li>Ali</li>
+            <li>Arda</li>
+            <li>Quaresma</li>
+        </ul>
+        <button onclick="kisi2()">Öğrencinin Bilgilerini
+            Öğrenmek için Tiklayin</button>
+    </div>
+</body>
+
+</html>
