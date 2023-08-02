@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Instagram Giriş Sayfası</title>
+  <style>
+    /* CSS ile sayfa düzeni ve görünümünü ayarlayabilirsiniz */
+  </style>
+</head>
+<body>
+  <div id="kayit-ol">
+    <button onclick="kayitOl()">Kayıt Ol</button>
+  </div>
+  
+  <div id="giris-yap" style="display: none;">
+    <h2>Giriş Yap</h2>
+    <input type="text" id="kullaniciAdi" placeholder="Kullanıcı Adı"><br>
+    <input type="password" id="sifre" placeholder="Şifre"><br>
+    <button onclick="girisYap()">Giriş Yap</button>
+  </div>
+  
+  <div id="giris-basarili" style="display: none;">
+    <h2>Giriş Başarılı!</h2>
+  </div>
+  
+  <script>
+    function kayitOl() {
+      document.getElementById("kayit-ol").style.display = "none";
+      document.getElementById("giris-yap").style.display = "block";
+    }
+    
+    function girisYap() {
+      var kullaniciAdi = document.getElementById("kullaniciAdi").value;
+      var sifre = document.getElementById("sifre").value;
+      
+      if (kullaniciAdi && sifre) {
+        document.getElementById("giris-yap").style.display = "none";
+        document.getElementById("giris-basarili").style.display = "block";
+      } else {
+        alert("Lütfen kullanıcı adı ve şifreyi girin!");
+      }
+    }
+  </script>
+</body>
+</html>
